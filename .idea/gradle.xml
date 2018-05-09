@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/imagetabgroup" />
+            <option value="$PROJECT_DIR$/imgpriewdemo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

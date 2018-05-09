@@ -4,12 +4,6 @@
     <declare-styleable name="RxImageGroup">
         <!--横向拍的列数-->
         <attr name="row" format="integer" />
-        <!--tab宽度-->
-        <attr name="imgTabWidth" format="dimension" />
-        <!--tab高度-->
-        <attr name="imgTabHeight" format="dimension" />
-        <!--删除图标宽度-->
-        <attr name="deleteIconWidth" format="dimension" />
         <!--删除图标资源id-->
         <attr name="deleteIconSrc" format="reference" />
         <!--能否编辑-->
