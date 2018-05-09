@@ -6,8 +6,8 @@
 
     <com.hutao.ui.imagetabgroup.RxImageGroup
         android:id="@+id/rxImageGroup"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
         app:deleteIconSrc="@mipmap/delete"
         app:isAbleEdit="true"
         app:row="3"/>

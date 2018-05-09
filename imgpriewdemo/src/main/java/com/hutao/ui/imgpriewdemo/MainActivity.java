@@ -1,20 +1,12 @@
 package com.hutao.ui.imgpriewdemo;
 
-import android.content.res.TypedArray;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.util.TypedValue;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import com.bumptech.glide.Glide;
-import com.hutao.ui.imagetabgroup.DensityUtil;
 import com.hutao.ui.imagetabgroup.RxImageGroup;
-
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void deleteItem(int position) {
-                Toast.makeText(MainActivity.this, "remoe: " + position, Toast.LENGTH_SHORT).show();
+                rxImageGroup.deletePosition(position);
             }
         });
 

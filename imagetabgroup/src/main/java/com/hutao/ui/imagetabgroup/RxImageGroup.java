@@ -92,7 +92,11 @@ public class RxImageGroup<T> extends FrameLayout {
 
     public void updateData(LinkedList<T> imagePathList) {
         this.mImagePathList = imagePathList;
-        invalidate();
+    }
+
+    public void deletePosition(int position) {
+        this.mImagePathList.remove(position);
+        mImageGridAdapter.notifyDataSetChanged();
     }
 
     public interface RxImageGroupListener{

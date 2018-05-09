@@ -1,7 +1,6 @@
 package com.hutao.ui.imagetabgroup;
 
 import android.content.Context;
-import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
