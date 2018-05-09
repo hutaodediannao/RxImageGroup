@@ -31,7 +31,7 @@ publish {
     userOrg = 'hutao'      //bintray注册的用户名
     groupId = 'com.hutao'         //compile引用时的第1部分groupId
     artifactId = 'RxImageGroup'     //compile引用时的第2部分项目名
-    publishVersion = '1.0.0'    //compile引用时的第3部分版本号
+    publishVersion = '1.0.1'    //compile引用时的第3部分版本号
     desc = '一个类似于朋友圈图片九宫格展示带删除功能的控件'
     website = 'https://github.com/hutaodediannao/RxImageGroup'
 }

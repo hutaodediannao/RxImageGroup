@@ -62,9 +62,10 @@ public class RxImageGroup<T> extends FrameLayout {
         return this.mImageGridAdapter.ismIsAbleEdit();
     }
 
-    public void setAbleEdit(boolean ableEdit) {
+    public RxImageGroup setAbleEdit(boolean ableEdit) {
         this.isAbleEdit = ableEdit;
         mImageGridAdapter.setmIsAbleEdit(this.isAbleEdit);
+        return this;
     }
 
     private void updateUI() {
@@ -90,13 +91,15 @@ public class RxImageGroup<T> extends FrameLayout {
         this.addView(mGridView);
     }
 
-    public void updateData(LinkedList<T> imagePathList) {
+    public RxImageGroup updateData(LinkedList<T> imagePathList) {
         this.mImagePathList = imagePathList;
+        return this;
     }
 
-    public void deletePosition(int position) {
+    public RxImageGroup deletePosition(int position) {
         this.mImagePathList.remove(position);
         mImageGridAdapter.notifyDataSetChanged();
+        return this;
     }
 
     public interface RxImageGroupListener{
@@ -109,7 +112,8 @@ public class RxImageGroup<T> extends FrameLayout {
 
     private RxImageGroupListener mRxImageGroupListener;
 
-    public void setmRxImageGroupListener(RxImageGroupListener mRxImageGroupListener) {
+    public RxImageGroup setmRxImageGroupListener(RxImageGroupListener mRxImageGroupListener) {
         this.mRxImageGroupListener = mRxImageGroupListener;
+        return this;
     }
 }

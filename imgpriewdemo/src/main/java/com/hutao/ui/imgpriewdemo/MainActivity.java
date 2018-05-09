@@ -4,8 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.Toast;
+
 import com.bumptech.glide.Glide;
 import com.hutao.ui.imagetabgroup.RxImageGroup;
+
 import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,31 +28,28 @@ public class MainActivity extends AppCompatActivity {
         imgSrcList.add("http://image.uczzd.cn/14148914851966540504.jpg?id=0&from=export&height=140&width=270");
 
         rxImageGroup = findViewById(R.id.rxImageGroup);
-        rxImageGroup.updateData(imgSrcList);
+        rxImageGroup.setAbleEdit(true)
+                .updateData(imgSrcList)
+                .setmRxImageGroupListener(new RxImageGroup.RxImageGroupListener() {
+                    @Override
+                    public void loadImage(ImageView imageView, Object objectPath) {
 
-        rxImageGroup.setmRxImageGroupListener(new RxImageGroup.RxImageGroupListener() {
-            @Override
-            public void loadImage(ImageView imageView, Object objectPath) {
+                        Glide.with(MainActivity.this)
+                                .load(objectPath)
+                                .error(R.mipmap.ic_launcher)
+                                .placeholder(R.mipmap.ic_launcher)
+                                .into(imageView);
+                    }
 
-                Glide.with(MainActivity.this)
-                        .load(objectPath)
-                        .error(R.mipmap.ic_launcher)
-                        .placeholder(R.mipmap.ic_launcher)
-                        .into(imageView);
-            }
+                    @Override
+                    public void clickItem(int position) {
+                        Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
+                    }
 
-            @Override
-            public void clickItem(int position) {
-                Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void deleteItem(int position) {
-                rxImageGroup.deletePosition(position);
-            }
-        });
-
-
-
+                    @Override
+                    public void deleteItem(int position) {
+                        rxImageGroup.deletePosition(position);
+                    }
+                });
     }
 }
