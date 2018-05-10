@@ -26,6 +26,6 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.github.bumptech.glide:glide:3.7.0'
-    //    compile 'com.hutao:RxImageGroup:1.0.0'
-    implementation project(':imagetabgroup')
+        compile 'com.hutao:RxImageGroup:1.0.3'
+//    implementation project(':imagetabgroup')
 }

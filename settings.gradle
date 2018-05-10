@@ -1,1 +1,2 @@
-include ':app', ':imagetabgroup', ':imgpriewdemo'
+include ':imagetabgroup' ,':imgpriewdemo'
+//':app',
