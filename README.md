@@ -59,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void clickItem(int position) {
-                        Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
+                        //可以在此处使用photoview+viewPager的方式放大缩小滑动查看图片
+                       Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
